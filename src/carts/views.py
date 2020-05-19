@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 from accounts.forms import LoginForm, GuestForm
@@ -9,6 +10,13 @@ from orders.models import Order
 from products.models import Product
 from .models import Cart
 
+
+
+def cart_detail_api_view(request):
+    cart_obj, new_obj = Cart.objects.new_or_get(request)
+    products = [{"name":x.name, "price":x.price} for x in cart_obj.products.all()]
+    cart_data = {"products":products,"subtotal":cart_obj.subtotal, "total":cart_obj.total}
+    return JsonResponse(cart_data)
 
 def cart_home(request):
 
@@ -29,9 +37,19 @@ def cart_update(request):
         cart_obj, new_obj = Cart.objects.new_or_get(request)
         if product_obj in cart_obj.products.all():
             cart_obj.products.remove (product_obj)
+            added = False
         else:
             cart_obj.products.add(product_obj)
+            added = True
         request.session['cart_items'] = cart_obj.products.count()
+        if request.is_ajax():
+            json_data = {
+                "added": added,
+                "removed": not added,
+                "cartItemsCount": cart_obj.products.count()
+
+            }
+            return JsonResponse(json_data)
     return redirect("cart:home")
 
 
