@@ -15,24 +15,26 @@
     </tr>
   </thead>
   <tbody class='cart-body'>
-    {% for product in cart.products.all %}
-    <tr>
-      <th scope="row">{{ forloop.counter }}</th>
-      <td>
-      <a href="{{ product.get_absolute_url }}"> {{ product.title }} </a>
-      {% include 'products/snippets/update-cart.html' with product=product cart=cart in_cart=True %}
-      </td>
-      <td>{{ product.price }}</td>
-      
-    </tr>
-    {% endfor %}
-    <tr>
-      <td colspan='2'></td>
-      <td><b>subtotal</b> {{ cart.subtotal }}</td>
-    </tr>
+    
+      {% for product in cart.products.all %}
+        <tr class='cart-product'>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>
+          <a href="{{ product.get_absolute_url }}"> {{ product.title }} </a>
+          {% include 'carts/snippets/remove-product.html ' with product_id=product.id  %}
+          </td>
+          <td>{{ product.price }}</td>
+          
+        </tr>
+      {% endfor %}
+    
     <tr>
       <td colspan='2'></td>
-      <td><b>Total</b> {{ cart.total }}</td>
+      <td><b>subtotal</b> <span class='cart-subtotal'> {{ cart.subtotal }}</span> MAD</td>
+    </tr>
+    <tr>
+      <td colspan='2'></td>
+      <td><b>Total</b> <span class='cart-total'> {{ cart.total }}</span> MAD</td>
     </tr>
     <tr>
       <td colspan='2'></td>
@@ -40,6 +42,10 @@
     </tr>
   </tbody>
 </table>
+<div class='cart-item-remove-form' style='display:none'>
+  {% include 'carts/snippets/remove-product.html ' %}
+</div>
+
 
 {% else %}
 
