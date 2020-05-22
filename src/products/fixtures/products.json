@@ -1,0 +1,128 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "T-Shirt",
+        "slug": "T-Shirt_2",
+        "description": "Maroc ZIYECH rouge numero 7",
+        "price": "120.0000000000",
+        "image": "products/1986569771/1986569771.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "T-Shirt",
+        "slug": "T-Shirt",
+        "description": "nice T-Shirt",
+        "price": "100.0000000000",
+        "image": "products/9256269312/9256269312.jfif",
+        "featured": false,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "Hat",
+        "slug": "Hat",
+        "description": "nice Hat",
+        "price": "50.0000000000",
+        "image": "products/unnamed_Ycx8kRv.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "title": "somthing2",
+        "slug": "somthing2",
+        "description": "description",
+        "price": "122334.0000000000",
+        "image": "",
+        "featured": true,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "title": "somthing",
+        "slug": "somthing",
+        "description": "Description",
+        "price": "1324.3600000000",
+        "image": "",
+        "featured": true,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "title": "qw",
+        "slug": "qw",
+        "description": "Description",
+        "price": "0E-10",
+        "image": "",
+        "featured": true,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "title": "Hat",
+        "slug": "hat-dk2g",
+        "description": "another one",
+        "price": "0E-10",
+        "image": "",
+        "featured": false,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "title": "T-Shirt",
+        "slug": "t-shirt-vjy7",
+        "description": "hsabd",
+        "price": "0E-10",
+        "image": "",
+        "featured": false,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "title": "new",
+        "slug": "new",
+        "description": "new",
+        "price": "0E-10",
+        "image": "",
+        "featured": false,
+        "active": true,
+        "timestamp": "2020-05-13T01:23:13.294Z"
+    }
+}
+]
