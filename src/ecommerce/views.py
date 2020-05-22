@@ -1,7 +1,8 @@
 from django.contrib.auth import authenticate, login, get_user_model
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,HttpResponse
 from .forms import *
+
 
 def home_page(request):
     context={
@@ -39,4 +40,4 @@ def Contact(request):
                 return HttpResponse(errors, status = 400, content_type='application/json')
 
     return render(request, "contact.html", context)
-
+ 

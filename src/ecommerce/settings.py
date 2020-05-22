@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'snowpenguin.django.recaptcha2',
 
     'accounts',
     'addresses',
@@ -93,11 +94,11 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'connection',
+        'NAME': 'oussama',
         'USER': 'root',
         'PASSWORD':'',
         'HOST': '127.0.0.1',
-        'PORT': '3308'
+        'PORT': '3306'
     }
 }
 
@@ -150,3 +151,6 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "static_root
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "media_root")
+
+RECAPTCHA_PRIVATE_KEY ='6LfGyvoUAAAAAArNugLPTBKulLfJzFf45Aw7mRcn'
+RECAPTCHA_PUBLIC_KEY ='6LfGyvoUAAAAADR7sFnAmKSVJSo29otVHmr9MTP6'
