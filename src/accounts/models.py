@@ -65,6 +65,12 @@ class User(AbstractBaseUser):
 
     def get_short_name(self):
         return self.email 
+
+    def has_perm(self, perm, obj=None):
+        return True
+        
+    def has_module_perm(self, app_label):
+        return True
    
 
     @property
