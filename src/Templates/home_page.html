@@ -11,12 +11,12 @@
 {% block content%}
   <div class='text-center'>
     <h1>{{ title }}</h1>
-    <h1>Hello world!!</h1>
+    <h1>Welcome to our store</h1>
   </div>
   
     <div class='row'>
         <div class='col'>
-            <img  src="{%static 'img/beach.jpg'%}" class='img-fluid'/>
+            <img  src="{%static 'img/photo.jpg'%}" class='img-fluid'/>
             <p>{{ content }}</p>
         </div>
     </div>
@@ -28,6 +28,49 @@
         </div>
     </div>
      {%endif%}
+
+        <!-- Footer -->
+  <footer class="bg3 p-t-75 p-b-32">
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-3 p-b-50">
+          <h4 class="stext-301 cl0 p-b-30">
+            SE SITE EST CREE PAR 
+          </h4>
+
+          <ul>
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+                HARCHI OUSSAMA
+              </a>
+            </li>
+
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+                YASIN ER-GAYBI
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 p-b-50">
+          <h4 class="stext-301 cl0 p-b-30">
+            pour nous contacter:
+          </h4>
+
+          <p class="stext-107 cl7 size-201">
+            
+            tel : 06-45-80-96-52
+          </p>
+          
+                    <p class="stext-107 cl7 size-201">
+            
+            fix : 05-87-89-96-52
+          </p>
+        
+
+  </footer>
 
 {% endblock %}
 
