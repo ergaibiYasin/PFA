@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'snowpenguin.django.recaptcha2',
+    'crispy_forms',
 
     'accounts',
     'addresses',
@@ -51,6 +52,8 @@ INSTALLED_APPS = [
     
     
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 AUTH_USER_MODEL = 'accounts.User'  #chamges the built-in user model to ours
 

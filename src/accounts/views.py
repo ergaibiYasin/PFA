@@ -32,7 +32,7 @@ def guest_register_view(request):
 
 class LoginView(FormView):
     form_class = LoginForm
-    template_name = 'accounts/register.html'
+    template_name = 'accounts/login.html'
     success_url = '/'  
 
     def form_valid(self, form):
