@@ -2,18 +2,20 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class='row justify-content-center' >
-        <div class='col-6'>
-            <div class='card'>
-                <div class='card-body'>
-                    <div class="d-flex justify-content-center">
-					    <h3 id="form-title">LOGIN</h3>
-				    </div>
+    <div class='login-container'>
+        <div class='row justify-content-center' >
+            <div class='col-6'>
+                <div class='card'>
+                    <div class='card-body'>
+                        <div class="d-flex justify-content-center">
+                            <h3 id="form-title">LOGIN</h3>
+                        </div>
 
-                    <form method='POST'>{% csrf_token %}
-                        {{form|crispy}}
-                        <button type='submit' class='btn btn-primary'>Login</button>
-                    </form>
+                        <form method='POST'>{% csrf_token %}
+                            {{form|crispy}}
+                            <button type='submit' class='btn btn-primary'>Login</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

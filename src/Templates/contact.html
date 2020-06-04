@@ -7,45 +7,61 @@
 <title>Contact</title>
 
 {% block content %}
-  <div class='text-center'>
-    <h1>{{ title }}</h1>
-    <h1>Hello world!!</h1>
-
-  </div>
-  
-    {% comment %} <div class='row'>
-        <div class='col'>
-            
-            <div class='col-md-6 col-12 mx-auto'>
-                <p>{{ content }}</p>
-                <form class='contact-form' method='POST' action='{% url "contact" %}'>{% csrf_token %}
-                    {{form.as_p}}
-                    <div class="g-recaptcha" data-sitekey="6LfGyvoUAAAAADR7sFnAmKSVJSo29otVHmr9MTP6"></div>
-                    <button type='submit' class='btn btn-default'>Submit</button>
-                </form>
-
-                
-            </div>
+    
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Contact us</h1>
         </div>
-    </div> {% endcomment %}
+    </section>
 
 
-    <div class='row justify-content-center' >
-        <div class='col-6'>
-            <div class='card'>
-                <div class='card-body'>
-                    <p>{{ content }}</p>
-                    <form class='contact-form' method='POST' action='{% url "contact" %}'>{% csrf_token %}
-                        {{form|crispy}}
-                        <div class="g-recaptcha" data-sitekey="6LfGyvoUAAAAADR7sFnAmKSVJSo29otVHmr9MTP6"></div>
-                        <button type='submit' class='btn btn-default'>Submit</button>
-                    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white"><i class="fa fa-envelope"></i> Contact us.
+                    </div>
+                    <div class="card-body">
+                        <form class='contact-form' method='POST' action='{% url "contact" %}'>{% csrf_token %}
+                                {{form|crispy}}
+                                <div class="g-recaptcha" data-sitekey="6LfGyvoUAAAAADR7sFnAmKSVJSo29otVHmr9MTP6"></div>
+                                <button type='submit' class='btn btn-primary'>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header bg-success text-white text-uppercase"><i class="fa fa-home"></i> Address</div>
+                    <div class="card-body">
+                        <p>Avenue Mohamed Ben Abdellah Regragui</p>
+                        <p>Rabat</p>
+                        <p>École Nationale Supérieure d'Informatiqueet d'Analyse des Systèmes</p>
+                        <p>Email : ENSIAS@example.com</p>
+                        <p>Tel. +212 674 072 968</p>
+
+                    </div>
+
+                    
+
                 </div>
             </div>
         </div>
     </div>
 
+    	
+    
+        
+    </div> 
+
+    
+
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 {% endblock content %}
+
+
+
+
+
 

@@ -1,21 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <!-- Page Content -->
+<div class="container">
 
-    <div class='row'>
-        <div class='col-12 col-md-6'>
-            <h1>{{ object.title }} </h1>
-            {{ object.description|linebreaks}} <br/>
-            {{ object.price }} <br/>
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4"> Product detail 
+  <small> {{ object.title }} </small>
+  </h1>
+
+  <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-8">
             {% if object.image %}
-                <img src='{{ object.image.url }}' class='img-fluid' />
+                    <img class="img-fluid" src='{{ object.image.url }}' alt="">
             {% endif %}
+        
         </div>
-        <div class='col-12 col-md-6'>
+
+        <div class="col-md-4">
+            <h3 class="my-3">Product Description</h3>
+            <p>{{ object.description|linebreaks}} <br/></p>
+            <h3 class="my-3">Project price: </h3>
+            {{ object.price }} MAD <br/><br/><br/>
             {% include 'products/snippets/update-cart.html' with product=object cart=cart %}
-            
         </div>
+        
+
     </div>
+  <!-- /.row -->
+
+  
+
+</div>
+<!-- /.container -->
+
+
 
 {% endblock content %}
-

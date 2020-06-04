@@ -1,3 +1,6 @@
+
+
+
 <form class='form-product-ajax' method='POST' action='{% url 'cart:update' %}'  data-endpoint='{% url 'cart:update' %}' class="form"> {% csrf_token %}
     <input name="product_id"  type="hidden" value="{{ product.id }}" />
     <span class='submit-span'>

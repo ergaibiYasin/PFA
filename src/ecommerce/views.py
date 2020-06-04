@@ -21,7 +21,7 @@ def About(request):
         "content":"welcome to about page"
         
     }
-    return render(request, "home_page.html", context)
+    return render(request, "about.html", context)
 
 def Contact(request):
     contactForm = ContactForm(request.POST or None)
@@ -40,4 +40,5 @@ def Contact(request):
                 return HttpResponse(errors, status = 400, content_type='application/json')
 
     return render(request, "contact.html", context)
+ 
  
